@@ -46,7 +46,7 @@ A atualização da Wiki na instância da OCI é totalmente automatizada.
 2.  **Validation:** (Opcional) O GitHub Actions valida a sintaxe do Markdown.
 3.  **Deploy:** O servidor na OCI realiza um `git pull` automático (via cron/webhook) e o container MkDocs reflete as mudanças.
 
-**URL de Produção:** [http://wiki.confi.com.vc:8000](http://wiki.confi.com.vc:8000)
+**URL de Produção:** [http://wiki.confi.com.vc:8000](http://wiki.confi.com.vc)
 
 ---
 
