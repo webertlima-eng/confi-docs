@@ -2,7 +2,7 @@
 title: Plataforma
 description: 
 published: true
-date: 2026-04-16T21:49:20.824Z
+date: 2026-04-16T21:49:39.449Z
 tags: 
 editor: markdown
 dateCreated: 2026-04-16T20:52:16.420Z
