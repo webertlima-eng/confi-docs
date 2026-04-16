@@ -2,7 +2,7 @@
 title: Kubernetes
 description: Documentação Completa (DevOps)
 published: true
-date: 2026-04-16T21:59:41.342Z
+date: 2026-04-16T22:05:32.964Z
 tags: devops, kubernetes, documentação
 editor: markdown
 dateCreated: 2026-04-16T21:22:27.993Z
