@@ -2,7 +2,7 @@
 title: Início
 description: 
 published: true
-date: 2026-04-16T20:49:00.706Z
+date: 2026-04-16T20:51:10.543Z
 tags: devops, overview
 editor: markdown
 dateCreated: 2026-04-16T20:24:23.813Z
@@ -24,8 +24,8 @@ Plataforma DevOps baseada em Kubernetes (OKE), GitOps e Terraform, com foco em e
 ## 🔗 Links rápidos
 
 * [Arquitetura OCI](../architecture-oci)
-* [Kubernetes](../platforms/kubernetes)
-* [CI/CD](../platforms/ci-cd)
+* [Kubernetes](../plataforma/kubernetes)
+* [CI/CD](../plataforma/ci-cd)
 * [Runbooks](../runbooks)
 
 ---
