@@ -2,7 +2,7 @@
 title: Plataforma
 description: 
 published: true
-date: 2026-04-16T21:41:23.195Z
+date: 2026-04-16T21:49:20.824Z
 tags: 
 editor: markdown
 dateCreated: 2026-04-16T20:52:16.420Z
@@ -27,7 +27,7 @@ O Kubernetes é uma plataforma open-source para orquestração de containers, re
 
 # 2. Arquitetura
 
-## Componentes do Control Plane
+## Componentes de Control plane
 
 * API Server
 * Scheduler
@@ -46,30 +46,32 @@ O Kubernetes é uma plataforma open-source para orquestração de containers, re
 
 ## Ver recursos
 
-kubectl get pods -A
-kubectl get svc -A
-kubectl get nodes
-
+`kubectl get pods -A
+`
+`kubectl get svc -A
+`
+`kubectl get nodes
+`
 ## Descrever recursos
 
-kubectl describe pod <pod>
-
+`kubectl describe pod <pod>
+`
 ## Logs
 
-kubectl logs <pod>
-
+`kubectl logs <pod>
+`
 ## Acessar container
 
-kubectl exec -it <pod> -- /bin/bash
-
+`kubectl exec -it <pod> -- /bin/bash
+`
 ## Aplicar configuração
 
-kubectl apply -f deployment.yaml
-
+`kubectl apply -f deployment.yaml
+`
 ## Deletar recurso
 
-kubectl delete -f deployment.yaml
-
+`kubectl delete -f deployment.yaml
+`
 ---
 
 #  4. Deploy (Exemplo)
@@ -97,8 +99,8 @@ spec:
 ```
 
 Aplicar:
-kubectl apply -f deployment.yaml
-
+`kubectl apply -f deployment.yaml
+`
 ---
 
 #  5. Service
@@ -126,9 +128,10 @@ spec:
 
 ### Diagnóstico
 
-kubectl describe pod <pod>
-kubectl logs <pod>
-
+`kubectl describe pod <pod>
+`
+`kubectl logs <pod>
+`
 ### Possíveis causas
 
 * Erro na aplicação
@@ -141,12 +144,12 @@ kubectl logs <pod>
 
 ### Ver eventos
 
-kubectl get events
+`kubectl get events`
 
 ### Ver logs
 
-kubectl logs <pod>
-
+`kubectl logs <pod>
+`
 ---
 
 #  7. Segurança
@@ -160,16 +163,16 @@ Controle de acesso baseado em roles.
 Armazenamento seguro de senhas e tokens.
 
 Exemplo:
-kubectl create secret generic meu-secret --from-literal=senha=123
-
+`kubectl create secret generic meu-secret --from-literal=senha=123
+`
 ---
 
 #  8. Observabilidade
 
 ## Logs
 
-kubectl logs <pod>
-
+`kubectl logs <pod>
+`
 ## Monitoramento
 
 * Prometheus
@@ -177,14 +180,14 @@ kubectl logs <pod>
 
 ## Métricas
 
-kubectl top pods
-
+`kubectl top pods
+`
 ---
 
 #  9. Rollback
 
-kubectl rollout undo deployment nginx-deployment
-
+`kubectl rollout undo deployment nginx-deployment
+`
 ---
 
 #  10. Boas Práticas
@@ -199,9 +202,8 @@ kubectl rollout undo deployment nginx-deployment
 
 #  11. Runbook de Incidente
 
-## Serviço fora do ar
+## Passos para serviço fora do ar
 
-### Passos:
 
 1. kubectl get pods -A
 2. Verificar pods com erro
