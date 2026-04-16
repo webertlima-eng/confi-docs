@@ -1,8 +1,8 @@
 ---
-title: plataforma
+title: Plataforma
 description: 
 published: true
-date: 2026-04-16T21:35:12.604Z
+date: 2026-04-16T21:41:23.195Z
 tags: 
 editor: markdown
 dateCreated: 2026-04-16T20:52:16.420Z
