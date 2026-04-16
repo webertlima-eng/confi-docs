@@ -2,7 +2,7 @@
 title: Kubernetes
 description: Documentação Completa (DevOps)
 published: true
-date: 2026-04-16T21:22:27.993Z
+date: 2026-04-16T21:23:54.613Z
 tags: devops, kubernetes, documentação
 editor: markdown
 dateCreated: 2026-04-16T21:22:27.993Z
@@ -12,7 +12,7 @@ dateCreated: 2026-04-16T21:22:27.993Z
 
 ---
 
-# 📘 1. Overview
+# 1. Overview
 
 O Kubernetes é uma plataforma open-source para orquestração de containers, responsável por automatizar deploy, escalabilidade e gerenciamento de aplicações.
 
@@ -25,7 +25,7 @@ O Kubernetes é uma plataforma open-source para orquestração de containers, re
 
 ---
 
-# 🧱 2. Arquitetura
+# 2. Arquitetura
 
 ## Componentes do Control Plane
 
@@ -42,7 +42,7 @@ O Kubernetes é uma plataforma open-source para orquestração de containers, re
 
 ---
 
-# ⚙️ 3. Comandos Essenciais
+# 3. Comandos Essenciais
 
 ## Ver recursos
 
@@ -72,7 +72,7 @@ kubectl delete -f deployment.yaml
 
 ---
 
-# 🚀 4. Deploy (Exemplo)
+# 4. Deploy (Exemplo)
 
 ```yaml
 apiVersion: apps/v1
@@ -101,7 +101,7 @@ kubectl apply -f deployment.yaml
 
 ---
 
-# 🌐 5. Service
+# 5. Service
 
 ```yaml
 apiVersion: v1
@@ -120,7 +120,7 @@ spec:
 
 ---
 
-# 🚨 6. Troubleshooting
+# 6. Troubleshooting
 
 ## Pod em CrashLoopBackOff
 
@@ -149,7 +149,7 @@ kubectl logs <pod>
 
 ---
 
-# 🔐 7. Segurança
+# 7. Segurança
 
 ## RBAC
 
@@ -164,7 +164,7 @@ kubectl create secret generic meu-secret --from-literal=senha=123
 
 ---
 
-# 📊 8. Observabilidade
+# 8. Observabilidade
 
 ## Logs
 
@@ -181,13 +181,13 @@ kubectl top pods
 
 ---
 
-# 🔄 9. Rollback
+# 9. Rollback
 
 kubectl rollout undo deployment nginx-deployment
 
 ---
 
-# 🧠 10. Boas Práticas
+# 0. Boas Práticas
 
 * Usar namespaces
 * Definir requests/limits
@@ -197,7 +197,7 @@ kubectl rollout undo deployment nginx-deployment
 
 ---
 
-# 📂 11. Estrutura Recomendada
+# 11. Estrutura Recomendada
 
 /devops/kubernetes/
 ├── overview
@@ -210,7 +210,7 @@ kubectl rollout undo deployment nginx-deployment
 
 ---
 
-# 🔥 12. Runbook de Incidente
+# 12. Runbook de Incidente
 
 ## Serviço fora do ar
 
@@ -222,6 +222,3 @@ kubectl rollout undo deployment nginx-deployment
 4. kubectl logs
 5. Reiniciar deployment se necessário
 
----
-
-# ✅ Fim da documentação
