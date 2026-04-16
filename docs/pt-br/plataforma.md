@@ -2,7 +2,7 @@
 title: plataforma
 description: 
 published: true
-date: 2026-04-16T21:34:34.085Z
+date: 2026-04-16T21:35:12.604Z
 tags: 
 editor: markdown
 dateCreated: 2026-04-16T20:52:16.420Z
@@ -197,20 +197,7 @@ kubectl rollout undo deployment nginx-deployment
 
 ---
 
-#  11. Estrutura Recomendada
-
-/devops/kubernetes/
-├── overview
-├── arquitetura
-├── comandos
-├── deploy
-├── troubleshooting
-├── seguranca
-└── runbooks
-
----
-
-#  12. Runbook de Incidente
+#  11. Runbook de Incidente
 
 ## Serviço fora do ar
 
