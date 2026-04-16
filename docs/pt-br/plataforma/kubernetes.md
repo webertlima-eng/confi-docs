@@ -2,17 +2,17 @@
 title: Kubernetes
 description: Documentação Completa (DevOps)
 published: true
-date: 2026-04-16T21:29:31.176Z
+date: 2026-04-16T21:56:20.466Z
 tags: devops, kubernetes, documentação
 editor: markdown
 dateCreated: 2026-04-16T21:22:27.993Z
 ---
 
-# Kubernetes - Documentação Completa (DevOps)
+#  Kubernetes - Documentação Completa (DevOps)
 
 ---
 
-# 1. Overview
+#  1. Overview
 
 O Kubernetes é uma plataforma open-source para orquestração de containers, responsável por automatizar deploy, escalabilidade e gerenciamento de aplicações.
 
@@ -23,11 +23,11 @@ O Kubernetes é uma plataforma open-source para orquestração de containers, re
 * Auto-healing
 * Deploy contínuo
 
----
+
 
 # 2. Arquitetura
 
-## Componentes do Control Plane
+## Componentes de Control plane
 
 * API Server
 * Scheduler
@@ -40,39 +40,40 @@ O Kubernetes é uma plataforma open-source para orquestração de containers, re
 * Kube Proxy
 * Container Runtime
 
----
 
-# 3. Comandos Essenciais
+
+#  3. Comandos Essenciais
 
 ## Ver recursos
 
-kubectl get pods -A
-kubectl get svc -A
-kubectl get nodes
-
+`kubectl get pods -A
+`
+`kubectl get svc -A
+`
+`kubectl get nodes
+`
 ## Descrever recursos
 
-kubectl describe pod <pod>
-
+`kubectl describe pod <pod>
+`
 ## Logs
 
-kubectl logs <pod>
-
+`kubectl logs <pod>
+`
 ## Acessar container
 
-kubectl exec -it <pod> -- /bin/bash
-
+`kubectl exec -it <pod> -- /bin/bash
+`
 ## Aplicar configuração
 
-kubectl apply -f deployment.yaml
-
+`kubectl apply -f deployment.yaml
+`
 ## Deletar recurso
 
-kubectl delete -f deployment.yaml
+`kubectl delete -f deployment.yaml
+`
 
----
-
-# 4. Deploy (Exemplo)
+#  4. Deploy (Exemplo)
 
 ```yaml
 apiVersion: apps/v1
@@ -97,11 +98,10 @@ spec:
 ```
 
 Aplicar:
-kubectl apply -f deployment.yaml
+`kubectl apply -f deployment.yaml
+`
 
----
-
-# 5. Service
+#  5. Service
 
 ```yaml
 apiVersion: v1
@@ -118,38 +118,36 @@ spec:
   type: ClusterIP
 ```
 
----
 
-# 6. Troubleshooting
+#  6. Troubleshooting
 
 ## Pod em CrashLoopBackOff
 
 ### Diagnóstico
 
-kubectl describe pod <pod>
-kubectl logs <pod>
-
+`kubectl describe pod <pod>
+`
+`kubectl logs <pod>
+`
 ### Possíveis causas
 
 * Erro na aplicação
 * Configuração incorreta
 * Dependência indisponível
 
----
 
 ## Pod não sobe
 
 ### Ver eventos
 
-kubectl get events
+`kubectl get events`
 
 ### Ver logs
 
-kubectl logs <pod>
+`kubectl logs <pod>
+`
 
----
-
-# 7. Segurança
+#  7. Segurança
 
 ## RBAC
 
@@ -160,16 +158,15 @@ Controle de acesso baseado em roles.
 Armazenamento seguro de senhas e tokens.
 
 Exemplo:
-kubectl create secret generic meu-secret --from-literal=senha=123
+`kubectl create secret generic meu-secret --from-literal=senha=123
+`
 
----
-
-# 8. Observabilidade
+#  8. Observabilidade
 
 ## Logs
 
-kubectl logs <pod>
-
+`kubectl logs <pod>
+`
 ## Monitoramento
 
 * Prometheus
@@ -177,17 +174,15 @@ kubectl logs <pod>
 
 ## Métricas
 
-kubectl top pods
+`kubectl top pods
+`
 
----
+#  9. Rollback
 
-# 9. Rollback
+`kubectl rollout undo deployment nginx-deployment
+`
 
-kubectl rollout undo deployment nginx-deployment
-
----
-
-# 0. Boas Práticas
+#  10. Boas Práticas
 
 * Usar namespaces
 * Definir requests/limits
@@ -195,30 +190,14 @@ kubectl rollout undo deployment nginx-deployment
 * Usar probes (liveness/readiness)
 * Evitar usar latest em produção
 
----
 
-# 11. Estrutura Recomendada
+#  11. Runbook de Incidente
 
-/devops/kubernetes/
-├── overview
-├── arquitetura
-├── comandos
-├── deploy
-├── troubleshooting
-├── seguranca
-└── runbooks
+## Passos para serviço fora do ar
 
----
-
-# 12. Runbook de Incidente
-
-## Serviço fora do ar
-
-### Passos:
 
 1. kubectl get pods -A
 2. Verificar pods com erro
 3. kubectl describe pod
 4. kubectl logs
 5. Reiniciar deployment se necessário
-
