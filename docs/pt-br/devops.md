@@ -2,7 +2,7 @@
 title: Início
 description: 
 published: true
-date: 2026-04-16T21:42:46.688Z
+date: 2026-04-16T20:51:10.543Z
 tags: devops, overview
 editor: markdown
 dateCreated: 2026-04-16T20:24:23.813Z
@@ -14,14 +14,14 @@ dateCreated: 2026-04-16T20:24:23.813Z
 
 Plataforma DevOps baseada em Kubernetes (OKE), GitOps e Terraform, com foco em escalabilidade, segurança e automação.
 
-## Objetivos
+## 🎯 Objetivos
 
 * Alta disponibilidade
 * Deploy contínuo (GitOps)
 * Segurança desacoplada (OpenBao)
 * Evitar lock-in de cloud
 
-##  Links rápidos
+## 🔗 Links rápidos
 
 * [Arquitetura OCI](../architecture-oci)
 * [Kubernetes](../plataforma/kubernetes)
@@ -30,7 +30,7 @@ Plataforma DevOps baseada em Kubernetes (OKE), GitOps e Terraform, com foco em e
 
 ---
 
-## Stack
+## 🧠 Stack
 
 * OCI (Oracle Cloud)
 * Kubernetes (OKE)
