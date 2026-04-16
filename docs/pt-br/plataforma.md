@@ -2,7 +2,7 @@
 title: Plataforma
 description: 
 published: true
-date: 2026-04-16T21:49:39.449Z
+date: 2026-04-16T21:52:45.897Z
 tags: 
 editor: markdown
 dateCreated: 2026-04-16T20:52:16.420Z
@@ -23,7 +23,7 @@ O Kubernetes é uma plataforma open-source para orquestração de containers, re
 * Auto-healing
 * Deploy contínuo
 
----
+
 
 # 2. Arquitetura
 
@@ -40,7 +40,7 @@ O Kubernetes é uma plataforma open-source para orquestração de containers, re
 * Kube Proxy
 * Container Runtime
 
----
+
 
 #  3. Comandos Essenciais
 
@@ -72,7 +72,6 @@ O Kubernetes é uma plataforma open-source para orquestração de containers, re
 
 `kubectl delete -f deployment.yaml
 `
----
 
 #  4. Deploy (Exemplo)
 
@@ -101,7 +100,6 @@ spec:
 Aplicar:
 `kubectl apply -f deployment.yaml
 `
----
 
 #  5. Service
 
@@ -120,7 +118,6 @@ spec:
   type: ClusterIP
 ```
 
----
 
 #  6. Troubleshooting
 
@@ -138,7 +135,6 @@ spec:
 * Configuração incorreta
 * Dependência indisponível
 
----
 
 ## Pod não sobe
 
@@ -150,7 +146,6 @@ spec:
 
 `kubectl logs <pod>
 `
----
 
 #  7. Segurança
 
@@ -165,7 +160,6 @@ Armazenamento seguro de senhas e tokens.
 Exemplo:
 `kubectl create secret generic meu-secret --from-literal=senha=123
 `
----
 
 #  8. Observabilidade
 
@@ -182,13 +176,11 @@ Exemplo:
 
 `kubectl top pods
 `
----
 
 #  9. Rollback
 
 `kubectl rollout undo deployment nginx-deployment
 `
----
 
 #  10. Boas Práticas
 
@@ -198,7 +190,6 @@ Exemplo:
 * Usar probes (liveness/readiness)
 * Evitar usar latest em produção
 
----
 
 #  11. Runbook de Incidente
 
