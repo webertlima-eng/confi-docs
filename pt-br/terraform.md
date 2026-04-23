@@ -2,14 +2,14 @@
 title: Terraform
 description: 
 published: true
-date: 2026-04-23T21:35:13.816Z
+date: 2026-04-23T21:35:38.122Z
 tags: 
 editor: markdown
 dateCreated: 2026-04-23T21:33:30.269Z
 ---
 
 
-# 🏗️ Terraform — Guia Completo
+# Terraform — Guia Completo
 
 > Infraestrutura como Código para ambientes **Oracle Cloud** e **Azure**
 
