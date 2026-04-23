@@ -2,7 +2,7 @@
 title: Terraform
 description: 
 published: true
-date: 2026-04-23T21:33:30.269Z
+date: 2026-04-23T21:35:13.816Z
 tags: 
 editor: markdown
 dateCreated: 2026-04-23T21:33:30.269Z
@@ -15,7 +15,7 @@ dateCreated: 2026-04-23T21:33:30.269Z
 
 ---
 
-## 📋 Índice
+##  Índice
 
 - [Instalação](#instalação)
   - [Windows](#windows)
@@ -491,7 +491,7 @@ Outputs:
 
 ---
 
-## 📁 Estrutura de Projeto Recomendada
+## Estrutura de Projeto Recomendada
 
 ```
 terraform/
@@ -511,7 +511,7 @@ terraform/
 
 ---
 
-## 🔗 Referências
+## Referências
 
 - [Terraform Docs — HashiCorp](https://developer.hashicorp.com/terraform/docs)
 - [OCI Provider — Terraform Registry](https://registry.terraform.io/providers/oracle/oci/latest/docs)
