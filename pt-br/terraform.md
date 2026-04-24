@@ -2,7 +2,7 @@
 title: Terraform
 description: 
 published: true
-date: 2026-04-23T21:35:38.122Z
+date: 2026-04-24T15:27:43.476Z
 tags: 
 editor: markdown
 dateCreated: 2026-04-23T21:33:30.269Z
@@ -26,9 +26,9 @@ dateCreated: 2026-04-23T21:33:30.269Z
   - [Azure CLI — Windows](#azure-cli--windows)
   - [Azure CLI — Linux](#azure-cli--linux)
 - [Módulos do Terraform](#módulos-do-terraform)
-  - [init](#-terraform-init)
-  - [plan](#-terraform-plan)
-  - [apply](#-terraform-apply)
+  - [init](#terraform-init)
+  - [plan](#terraform-plan)
+  - [apply](#terraform-apply)
 
 ---
 
