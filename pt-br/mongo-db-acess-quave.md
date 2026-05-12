@@ -1,8 +1,8 @@
 ---
-title: 
+title: MongoDB - Acesso e Liberação de Permissões (Quave)
 description: 
 published: true
-date: 2026-05-12T21:52:04.209Z
+date: 2026-05-12T21:54:26.143Z
 tags: 
 editor: markdown
 dateCreated: 2026-05-12T21:51:36.768Z
