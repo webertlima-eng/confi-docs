@@ -2,7 +2,7 @@
 title: Arquitetura OCI
 description: 
 published: true
-date: 2026-05-15T17:33:03.251Z
+date: 2026-05-15T17:33:50.400Z
 tags: 
 editor: markdown
 dateCreated: 2026-04-16T20:26:46.778Z
