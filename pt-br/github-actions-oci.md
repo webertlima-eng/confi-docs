@@ -2,7 +2,7 @@
 title: GitHub Actions + OCI Authentication (OIDC e API Key)
 description: 
 published: true
-date: 2026-05-18T15:01:08.546Z
+date: 2026-05-25T15:15:27.007Z
 tags: 
 editor: markdown
 dateCreated: 2026-05-18T15:01:08.546Z
@@ -441,6 +441,269 @@ Evitar:
 | OKE Ready               | OK                      |
 | OIDC JWT                | Parcial                 |
 | Federation OCI completa | Limitada no Domain Free |
+
+---
+
+# Limitações do GitHub Free
+
+## GitHub Actions Free
+
+O GitHub Free possui limitações importantes que precisam ser consideradas para ambientes corporativos.
+
+---
+
+# Principais limitações
+
+| Recurso                         | GitHub Free    |
+| ------------------------------- | -------------- |
+| GitHub Actions minutos          | Limitado       |
+| Concurrent jobs                 | Limitado       |
+| Environment approvals avançados | Limitado       |
+| Secret scanning avançado        | Limitado       |
+| Enterprise policies             | Não disponível |
+| OIDC Federation avançada        | Parcial        |
+| Auditoria avançada              | Limitada       |
+| Runners enterprise              | Não disponível |
+
+---
+
+# Impacto prático
+
+## 1. Minutos de execução
+
+Pipelines Terraform/OKE podem consumir muitos minutos.
+
+Exemplo:
+
+* terraform plan
+* terraform apply
+* helm deploy
+* build Docker
+* push OCIR
+
+Tudo isso consome GitHub Actions runtime.
+
+---
+
+# 2. Segurança reduzida
+
+No GitHub Free:
+
+* recursos enterprise de segurança são limitados
+* controles organizacionais são menores
+* governança é reduzida
+
+---
+
+# 3. Menor controle de ambientes
+
+Features como:
+
+* approvals obrigatórios
+* deployment rules avançadas
+* environment governance
+
+possuem limitações no plano free.
+
+---
+
+# Limitações do OCI Identity Domain Free
+
+## Principais limitações
+
+| Recurso                      | Domain Free   |
+| ---------------------------- | ------------- |
+| Workload Identity Federation | Limitado      |
+| Token Exchange RFC           | Parcial       |
+| OCI CLI Federation           | Não funcional |
+| OAuth Federation avançada    | Limitada      |
+| Identity Propagation Trust   | Limitado      |
+| Recursos enterprise IAM      | Limitados     |
+| Federation Terraform nativa  | Inconsistente |
+
+---
+
+# Impacto no projeto
+
+O principal impacto encontrado foi:
+
+```text
+GitHub JWT
+→ OCI Token Exchange
+→ OCI Session Token
+→ OCI CLI Federation
+```
+
+não funcionar completamente.
+
+Mesmo com:
+
+* OAuth Client OCI
+* Dynamic Groups
+* Policies
+* JWT válido
+* Audience correta
+
+A tenancy OCI rejeitou o fluxo RFC Token Exchange.
+
+---
+
+# Consequência prática
+
+Não foi possível utilizar:
+
+```text
+OIDC puro sem API Key
+```
+
+para:
+
+* OCI CLI
+* Terraform OCI
+* OKE deploy federado
+
+---
+
+# Limitações do OCI Key Management Free Tier
+
+## O que funciona
+
+Mesmo no free tier é possível utilizar:
+
+✅ OCI Vault
+✅ OCI Secrets
+✅ OCI KMS básico
+✅ Integração OCI CLI
+✅ Integração Terraform
+✅ Integração GitHub Actions
+
+---
+
+# Limitações encontradas
+
+| Recurso                       | Free Tier      |
+| ----------------------------- | -------------- |
+| Quantidade de Vaults          | Limitado       |
+| Quantidade de Keys            | Limitado       |
+| HSM dedicado                  | Não disponível |
+| Recursos enterprise avançados | Limitados      |
+| Rotação avançada automática   | Parcial        |
+| Governança enterprise         | Limitada       |
+
+---
+
+# Estratégia adotada
+
+Foi adotado o seguinte modelo:
+
+```text
+GitHub Actions
+↓
+API Key técnica OCI
+↓
+OCI Vault
+↓
+Terraform / OCI CLI / OKE
+```
+
+---
+
+# Vantagens desse modelo
+
+Mesmo sem federation completa:
+
+✅ Compatível com Terraform
+✅ Compatível com OKE
+✅ Compatível com ArgoCD
+✅ Compatível com OCI CLI
+✅ Integração simples
+✅ Segurança adequada
+✅ Menor complexidade operacional
+
+---
+
+# O que fica no GitHub
+
+Somente credenciais bootstrap:
+
+| Secret           |
+| ---------------- |
+| OCI_USER_OCID    |
+| OCI_TENANCY_OCID |
+| OCI_FINGERPRINT  |
+| OCI_PRIVATE_KEY  |
+
+---
+
+# O que deve ficar no OCI Vault
+
+Exemplos:
+
+* kubeconfig
+* tokens OCI Registry
+* senhas banco
+* API tokens
+* certificados
+* Helm secrets
+* secrets aplicação
+
+---
+
+# Segurança do Modelo Final
+
+## Modelo implementado
+
+```text
+GitHub Actions
+↓
+GitHub Secrets (bootstrap)
+↓
+OCI API Key técnica
+↓
+OCI Vault
+↓
+Terraform / OCI CLI / OKE
+```
+
+---
+
+# Considerações finais
+
+Mesmo sem federation/OIDC completa, o modelo atual:
+
+✅ é seguro
+✅ é amplamente utilizado na OCI
+✅ é compatível com Terraform
+✅ é compatível com OKE
+✅ é compatível com ArgoCD
+✅ suporta crescimento futuro
+
+---
+
+# Evolução futura
+
+Caso a OCI evolua federation no Identity Domain:
+
+será possível substituir:
+
+```text
+OCI API Key
+```
+
+por:
+
+```text
+OIDC Federation completa
+```
+
+sem necessidade de alterar:
+
+* Terraform
+* Vault
+* OKE
+* ArgoCD
+* estrutura IAM
+* compartments
 
 ---
 
